@@ -3,13 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>x</title>
-<script>
-	//30分钟刷新页面一次
-	setTimeout(() => {
-		location.replace(location.href);
-	},1000*60*30)
-</script>
 <style type="text/css">
+	@font-face {
+		font-family:font_qi;
+		src:url("fonts/font_qi.ttf");
+	}
 	img {
 		
 	}
@@ -17,49 +15,16 @@
 		text-align: center;
 	}
 	.img_box{
-		width: 20%;
+		margin-top:60px;
+		width: 50%;
+
 		float: left;
-		
 	}
 	.text{
-		margin-top: 30px;
+		margin-top: 24px;
 		font-size:40px;
-		font-family:"楷体";
+		font-family:font_qi;
 	}
-	.rotation_box{
-		width: 100%;
-		overflow: hidden;
-	}
-	.rotation_subbox{
-		width: 250%;
-		animation: move 10s infinite;
-	}
-	@keyframes move {
-		0%{
-		   transform: translateX(0);
-		}
-		28%{
-		   transform: translateX(0);
-		}
-		33%{
-		   transform: translateX(-20%);
-		}
-		62%{
-		   transform: translateX(-20%);
-		}
-		67%{
-		   transform: translateX(-40%);
-		}
-		95%{
-		   transform: translateX(-40%);
-		}
-		100%{
-		   transform: translateX(-60%);
-		}
-		
-
-    }
-
 
 	@keyframes animation-before{
 		0% {
@@ -234,7 +199,7 @@
 	
 	.bot_text{
 		float: left;
-		height: 200px;
+		margin-top: 30px;
 		width: 100%;
 		display: flex;justify-content: center;align-items: center;background: white;
 
@@ -256,7 +221,7 @@
     position: absolute;
     /* 向左侧移2px */
     left: -2px;
-    width: 100%;
+    width: calc(100% - 4px);
     /* 将背景色设为与主背景同样的颜色，用于遮挡我们的标签元素 */
     background: white;
     /* 给before伪元素的文本添加左侧2px大小的红色文字阴影 */
@@ -270,7 +235,7 @@
     position: absolute;
     /* 向左侧移2px */
     left: 2px;
-    width: 100%;
+    width: calc(100% - 4px);
     /* 将背景色设为与主背景同样的颜色，用于遮挡我们的标签元素 */
     background: white;
     /* 给before伪元素的文本添加右侧2px大小的蓝色文字阴影 */
@@ -278,70 +243,42 @@
     /* 应用蒙版垂直变化动画，并一直循环 */
     animation: animation-after 6s infinite linear alternate-reverse;
 }
+body{
+	width: 100%;
+	margin: 0px;
+}
 
 </style>
 </head>
 
 
 <body>
-	<div style="vertical-align: middle">
-    	<img src="img/USC.png" width="400" height="auto" alt=""/> 
-		
-	</div>
+<!--	<div style="vertical-align: middle">-->
+<!--    	<img src="img/USC.png" width="350" height="auto" alt=""/> -->
+<!--		-->
+<!--	</div>-->
 
-	<div class="rotation_box">
-		<div class="rotation_subbox">
-			<div class="img_box">
-				<div>
-				  <img src="img/card.png" width="500" height="aoto" alt="" ></img>		
-				</div>
-			  <div class="text" style="color:#329356">
-					<span>补卡/补证/改站登记</span>
-				</div>
-			</div>
-			<div class="img_box">
-				<div>
-				  <img src="img/envelope.png" width="500" height="aoto" alt="" ></img>		
-				</div>
-			  <div class="text" style="color: #3EB86B">
-					<span>密封材料登记</span>
-				</div>
 
-			</div>
-			<div class="img_box">
-				<div>
-				  <img src="img/umbrella.png" width="500" height="aoto" alt="" ></img>		
-				</div>
-			  <div class="text" style="color:#17729D">
-					<span>雨伞登记</span>
-				</div>
-
-			</div>
-			<div class="img_box">
-				<div>
-				  <img src="img/card.png" width="500" height="aoto" alt="" ></img>		
-				</div>
-			  <div class="text" style="color:#329356">
-					<span>补卡/补证/改站登记</span>
-				</div>
-			</div>
-			<div class="img_box">
-				<div>
-				  <img src="img/envelope.png" width="500" height="aoto" alt="" ></img>		
-				</div>
-			  <div class="text" style="color: #3EB86B">
-					<span>密封材料登记</span>
-				</div>
-
-			</div>
+	<div class="img_box">
+		<div>
+		  <img src="img/identity_card.png" width="500" height="aoto" alt="" ></img>		
+		</div>
+	  <div class="text" style="color:#04777A">
+			<span>学生证更新</span>
 		</div>
 	</div>
-	
-<!--
+	<div class="img_box">
+		<div>
+		  <img src="img/envelop.png" width="500" height="aoto" alt="" ></img>		
+		</div>
+	  <div class="text" style="color: #3EB86B">
+			<span>密封材料登记</span>
+		</div>
+
+	</div>
 	<div class="bot_text">
 		<div class="txt" data-text="UNIVERSITY SERVICE CENTER"> </div>
 	</div>
--->
 
 
 
